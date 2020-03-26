@@ -1,0 +1,74 @@
+
+
+    .btn-send{
+       margin-left: 20px;
+    }
+    @media only screen and (max-width: 2500px){
+        .source{
+            width: 800px;
+            height: 36px;
+            border:1px solid;
+            border-radius:5px;
+            border-color: pink;
+        }
+    }
+    @media only screen and (max-width:1260px){
+        .source{
+            width: 400px;
+            height: 36px;
+            border:1px solid;
+            border-radius:5px;
+            border-color: pink;
+        }
+    }
+    @media only screen and (max-width:1096px){
+        .source{
+            width: 170px;
+            height: 36px;
+            border:1px solid;
+            border-radius:5px;
+            border-color: pink;
+        }
+        .btn-send{
+            float: left;
+        }
+
+    }
+    .source:focus{
+        border: 1px none ;
+        border-color: red;
+    }
+
+
+    .mp{
+        position:fixed;
+        top:5px;
+        right:5px;
+    }
+
+
+    .btn-save{
+        border:1px solid;
+        border-radius:5px;
+        border-color: palevioletred;
+        color: palevioletred;
+        background-color: whitesmoke;
+    }
+    /*!*保存草稿鼠标接触样式*!*/
+    .btn-save:hover,.btn-save:active{
+        background-color: palevioletred;
+        opacity: 0.7;
+
+    }
+    /*!*发布样式*!*/
+    .btn-release{
+        background-color: palevioletred;
+        border-radius:5px;
+        color:white;
+    }
+    /*!*发布鼠标接触样式*!*/
+    .btn-release:hover,.btn-release:active{
+        background-color:hotpink;
+        opacity: 0.8;
+        color: white;
+    }

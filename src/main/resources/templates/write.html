@@ -3,35 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
     <link rel="stylesheet" th:href="@{/editormd/css/editormd.css}"/>
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
     <script src="/editormd/editormd.js"></script>
-    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/foundation/5.5.3/css/foundation.min.css">
+   <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/foundation/5.5.3/css/foundation.min.css">
+
     <link rel="stylesheet" href="http://static.runoob.com/assets/foundation-icons/foundation-icons.css">
 
+
+
+
+
 </head>
-
 <body>
+<!--<form class="navbar-form navbar-left" role="search">
+    <button type="button" class="btn btn-default" aria-label="Left Align">
+        <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>文章管理
+    </button>
 
+    <input id="title" type="text" class=" source"  placeholder="输入文章标题" maxlength="100">
+    <button type="submit" class="btn btn-default btn-send btn-save">保存草稿</button>
+    <button id="input" type="submit" class="btn btn-default btn-send btn-release">发布文章</button>
+    <input  id="input" type="button" class="btn btn-default btn-send btn-release" value="发布">
+
+</form>-->
 <form>
-    <br>
     <div class="row">
         <div class="large-12 columns manager">
             <div class="row collapse prefix-radius">
                 <div class="small-2 columns">
                     <span type="button" class="prefix "><i class="fi-arrow-left"></i>文章管理</span>
                 </div>
-                <div class="small-8 columns">
+
+                <div class="small-6 columns">
                     <input id="title" type="text" placeholder="请输入标题">
                 </div>
-                <div class="small-2 columns">
+                <div class="small-1 columns">
+                </div>
+                <div class="small-3 columns">
                     <ul class="button-group">
-<!--                        <li><button  class="button  tiny save">保存</button></li>-->
+                        <li><button  class="button  tiny save">保存</button></li>
                         <li><input id="input" class="button  tiny send  success" type="button" value="发送"></li>
                     </ul>
+
                 </div>
+
             </div>
+
         </div>
+
     </div>
 </form>
 <div id="test-editor">
@@ -49,6 +70,7 @@
         });
 
         $("#input").click(function () {
+            console.log("hello world");
             $.post({
                 url: "/editormd",
                 data: {
@@ -62,6 +84,7 @@
                 error: function () {
                     console.log("发送失败");
                     alert("发送失败");
+
                 }
             });
         })
